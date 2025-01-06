@@ -1,0 +1,28 @@
+{
+    "name": "express-api-jukebox-back-end-lab",
+    "version": "1.0.0",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/luiscuriel-bit/express-api-jukebox-back-end-lab.git"
+    },
+    "keywords": [],
+    "author": "Luis Curiel De Sousa",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/luiscuriel-bit/mentormatch/issues"
+    },
+    "description": "",
+    "homepage": "https://github.com/luiscuriel-bit/express-api-jukebox-back-end-lab#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "method-override": "^3.0.0",
+        "mongoose": "^8.9.3",
+        "morgan": "^1.10.0"
+    }
+}
