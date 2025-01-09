@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const methodOverride = require('method-override');
 const morgan = require('morgan');
 const cors = require('cors');
 
@@ -15,7 +14,6 @@ mongoose.connection.on('connected', () => {
 
 app.use(cors());
 app.use(express.json());
-app.use(methodOverride('_method'));
 app.use(morgan('dev'));
 
 app.use('/tracks', tracksController);

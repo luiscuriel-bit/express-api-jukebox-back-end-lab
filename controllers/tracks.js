@@ -16,7 +16,6 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try {
-        searchTrack('Hola')
         const tracks = await Track.find();
         return res.status(200).json(tracks);
     } catch (error) {
@@ -38,7 +37,8 @@ router.get('/:id', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
     try {
-        const updatedTrack = await Track.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        const spotifyInfo = await searchTrack(req.body);
+        const updatedTrack = await Track.findByIdAndUpdate(req.params.id, spotifyInfo, { new: true });
         if (!updatedTrack) return res.status(404).json({ message: 'Track not found' });
         return res.status(200).json(updatedTrack);
     } catch (error) {
